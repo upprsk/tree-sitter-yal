@@ -1,0 +1,38 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "yal",
+      "camelcase": "Yal",
+      "title": "Yal",
+      "scope": "source.yal",
+      "file-types": [
+        "yal"
+      ],
+      "injection-regex": "^yal$",
+      "class-name": "TreeSitterYal"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Low level systems programming language.",
+    "authors": [
+      {
+        "name": "Lucas Ross"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/upprsk/yalc"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
