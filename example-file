@@ -1,5 +1,10 @@
 module main;
 
-func main() {
-    var x = 12;
+import "core:io";
+
+func main() i32 {
+    var world = "World";
+    io.printfln("Hello, %s!", world);
+
+    return 0;
 }
