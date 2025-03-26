@@ -24,9 +24,9 @@ module.exports = grammar({
   extras: ($) => [$.comment, /\s/],
 
   rules: {
-    source_file: ($) => seq($.package_decl, repeat($._top_level_decl)),
+    source_file: ($) => seq($.module_decl, repeat($._top_level_decl)),
 
-    package_decl: ($) => seq("package", field("name", $.id)),
+    module_decl: ($) => seq("module", field("name", $.id), ";"),
     _top_level_decl: ($) => choice($.func_decl, $.var_decl, $.def_decl),
 
     // decls
