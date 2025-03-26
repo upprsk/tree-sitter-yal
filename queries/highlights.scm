@@ -2,24 +2,36 @@
 ; Identifiers
 ; ---------------------------------------------------------
 
+((id) @variable.builtin
+  (#eq? @variable.builtin "_"))
+
 (var_decl name: (id_pack (id) @variable))
+
 (func_args_item name: (id) @variable.parameter)
 (struct_field name: (id) @variable.member)
 (field name: (id) @variable.member)
 
+(def_decl name: (id_pack (id) @constant))
+
 (package_decl name: (id) @module)
 
 ((id) @constant.builtin
-  (#any-eq? @constant.builtin "nil"))
+  (#any-of? @constant.builtin "nil"))
+  
+(func_attr (decorator) @attribute.builtin)
+(func_attr key: (id) @property)
 
 ; ---------------------------------------------------------
 ; Literals
 ; ---------------------------------------------------------
 
-(string_content) @string
+(string) @string
 (escape_sequence) @string.escape
 
+((id) @boolean
+  (#any-of? @boolean "true" "false"))
 (int) @number
+(float) @number.float
 
 ; ---------------------------------------------------------
 ; Types
@@ -29,7 +41,11 @@
   name: (id) @type.definition)
 
 ((id) @type.builtin
-  (#any-eq? @type.builtin "i32"))
+  (#any-of? @type.builtin "i32"))
+
+[
+  "..."
+] @type.builtin
 
 ; ---------------------------------------------------------
 ; Functions
@@ -41,11 +57,15 @@
 (call callee: (id) @function.call)
 
 [
-  "="
+  "=" "==" "!="
   "+"
   "*"
   "/"
   "?"
+  "!"
+  "~"
+  "<" ">" "<=" ">="
+  "<<" ">>"
 ] @operator
 
 ; ---------------------------------------------------------
@@ -56,6 +76,7 @@
   "var"
   "def"
   "defer"
+  "as"
 ] @keyword
 
 [
@@ -71,6 +92,10 @@
 ] @keyword.import
 
 [
+  "const"
+] @keyword.modifier
+
+[
   "while"
 ] @keyword.repeat
 
@@ -80,6 +105,7 @@
 
 [
   "if"
+  "else"
 ] @keyword.conditional
 
 ; ---------------------------------------------------------
@@ -89,6 +115,7 @@
 [
   ","
   ":"
+  ";"
 ] @punctuation.delimiter
 
 [
@@ -102,4 +129,4 @@
 ; Comments
 ; ---------------------------------------------------------
 
-
+(comment) @comment
