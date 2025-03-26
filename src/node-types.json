@@ -2455,6 +2455,21 @@
     }
   },
   {
+    "type": "part",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "ptr",
     "named": true,
     "fields": {},
@@ -2750,6 +2765,10 @@
         },
         {
           "type": "module_decl",
+          "named": true
+        },
+        {
+          "type": "part",
           "named": true
         },
         {
@@ -3537,6 +3556,10 @@
   },
   {
     "type": "or",
+    "named": false
+  },
+  {
+    "type": "part",
     "named": false
   },
   {

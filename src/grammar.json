@@ -57,6 +57,10 @@
         {
           "type": "SYMBOL",
           "name": "import"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "part"
         }
       ]
     },
@@ -648,6 +652,19 @@
         {
           "type": "STRING",
           "value": ";"
+        }
+      ]
+    },
+    "part": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "part"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
         }
       ]
     },

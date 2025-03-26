@@ -28,7 +28,7 @@ module.exports = grammar({
 
     module_decl: ($) => seq("module", field("name", $.id), ";"),
     _top_level_decl: ($) =>
-      choice($.func_decl, $.var_decl, $.def_decl, $.import),
+      choice($.func_decl, $.var_decl, $.def_decl, $.import, $.part),
 
     // decls
 
@@ -85,6 +85,7 @@ module.exports = grammar({
 
     import: ($) =>
       seq("import", $.string, optional(seq("as", field("alias", $.id))), ";"),
+    part: ($) => seq("part", $.string),
 
     id_pack: ($) => sepBy1(",", $.id),
     expr_pack: ($) => sepBy1(",", $._expr),

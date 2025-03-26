@@ -24,7 +24,7 @@
 
 ((id) @constant.builtin
   (#any-of? @constant.builtin "nil"))
-  
+
 (func_attr (decorator) @attribute.builtin)
 (func_attr key: (id) @property)
 
@@ -96,6 +96,8 @@
 
 [
   "module"
+  "import"
+  "part"
 ] @keyword.import
 
 [
