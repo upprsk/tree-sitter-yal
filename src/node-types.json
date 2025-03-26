@@ -2231,6 +2231,22 @@
     }
   },
   {
+    "type": "module_decl",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "mptr",
     "named": true,
     "fields": {},
@@ -2410,22 +2426,6 @@
           "named": true
         }
       ]
-    }
-  },
-  {
-    "type": "package_decl",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "id",
-            "named": true
-          }
-        ]
-      }
     }
   },
   {
@@ -2719,7 +2719,7 @@
           "named": true
         },
         {
-          "type": "package_decl",
+          "type": "module_decl",
           "named": true
         },
         {
@@ -3498,11 +3498,11 @@
     "named": true
   },
   {
-    "type": "or",
+    "type": "module",
     "named": false
   },
   {
-    "type": "package",
+    "type": "or",
     "named": false
   },
   {

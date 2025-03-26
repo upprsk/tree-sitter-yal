@@ -7,7 +7,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "package_decl"
+          "name": "module_decl"
         },
         {
           "type": "REPEAT",
@@ -18,12 +18,12 @@
         }
       ]
     },
-    "package_decl": {
+    "module_decl": {
       "type": "SEQ",
       "members": [
         {
           "type": "STRING",
-          "value": "package"
+          "value": "module"
         },
         {
           "type": "FIELD",
@@ -32,6 +32,10 @@
             "type": "SYMBOL",
             "name": "id"
           }
+        },
+        {
+          "type": "STRING",
+          "value": ";"
         }
       ]
     },
