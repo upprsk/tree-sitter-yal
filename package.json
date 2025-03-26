@@ -46,5 +46,14 @@
     "prestart": "tree-sitter build --wasm",
     "start": "tree-sitter playground",
     "test": "node --test bindings/node/*_test.js"
-  }
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.yal",
+      "file-types": [ "yal" ],
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    }
+  ]
 }
