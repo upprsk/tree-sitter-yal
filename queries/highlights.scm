@@ -13,7 +13,7 @@
 
 (def_decl name: (id_pack (id) @constant))
 
-(package_decl name: (id) @module)
+(module_decl name: (id) @module)
 
 ((id) @constant.builtin
   (#any-of? @constant.builtin "nil"))
@@ -88,7 +88,7 @@
 ] @keyword.type
 
 [
-  "package"
+  "module"
 ] @keyword.import
 
 [
