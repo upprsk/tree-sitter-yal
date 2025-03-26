@@ -2,6 +2,8 @@ module main;
 
 import "core:io";
 
+part "test_a";
+
 func main() i32 {
     var world = "World";
     io.printfln("Hello, %s!", world);

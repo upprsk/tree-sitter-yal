@@ -85,7 +85,7 @@ module.exports = grammar({
 
     import: ($) =>
       seq("import", $.string, optional(seq("as", field("alias", $.id))), ";"),
-    part: ($) => seq("part", $.string),
+    part: ($) => seq("part", $.string, ";"),
 
     id_pack: ($) => sepBy1(",", $.id),
     expr_pack: ($) => sepBy1(",", $._expr),
