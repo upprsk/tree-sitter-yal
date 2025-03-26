@@ -9,6 +9,7 @@
       "file-types": [
         "yal"
       ],
+      "highlights": "queries/highlights.scm",
       "injection-regex": "^yal$",
       "class-name": "TreeSitterYal"
     }
