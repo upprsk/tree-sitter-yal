@@ -1,1 +1,5 @@
+module main;
 
+func main() {
+    var x = 12;
+}

@@ -2034,6 +2034,32 @@
     }
   },
   {
+    "type": "import",
+    "named": true,
+    "fields": {
+      "alias": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "lit",
     "named": true,
     "fields": {},
@@ -2716,6 +2742,10 @@
         },
         {
           "type": "func_decl",
+          "named": true
+        },
+        {
+          "type": "import",
           "named": true
         },
         {
@@ -3491,6 +3521,10 @@
   },
   {
     "type": "if",
+    "named": false
+  },
+  {
+    "type": "import",
     "named": false
   },
   {

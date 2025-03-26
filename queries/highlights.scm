@@ -13,7 +13,14 @@
 
 (def_decl name: (id_pack (id) @constant))
 
+((module_decl name: (id) @module.builtin)
+  (#eq? @module.builtin "main"))
 (module_decl name: (id) @module)
+(import alias: (id) @module)
+
+[
+  "import"
+] @keyword.import
 
 ((id) @constant.builtin
   (#any-of? @constant.builtin "nil"))
