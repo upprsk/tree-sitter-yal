@@ -28,13 +28,13 @@ module.exports = grammar({
 
     module_decl: ($) => seq("module", field("name", $.id), ";"),
     _top_level_decl: ($) =>
-      choice($.func_decl, $.var_decl, $.def_decl, $.import, $.part),
+      choice($.func_decl, $._top_var_decl, $._top_def_decl, $.import, $.part),
 
     // decls
 
     func_decl: ($) =>
       seq(
-        repeat($.func_attr),
+        repeat($.top_decl_attr),
         "func",
         field("name", $.func_id),
         optional($.func_gargs),
@@ -43,7 +43,7 @@ module.exports = grammar({
         choice($.block, ";"),
       ),
 
-    func_attr: ($) =>
+    top_decl_attr: ($) =>
       seq(
         $.decorator,
         optional(
@@ -66,26 +66,12 @@ module.exports = grammar({
     func_args_item: ($) =>
       seq(field("name", $.id), ":", field("type", $._expr)),
 
-    var_decl: ($) =>
-      seq(
-        "var",
-        field("name", $.id_pack),
-        choice(
-          seq(":", $.expr_pack, optional(seq("=", $.expr_pack)), ";"),
-          seq("=", $.expr_pack, ";"),
-        ),
-      ),
-
-    def_decl: ($) =>
-      seq(
-        "def",
-        field("name", $.id_pack),
-        seq(optional(seq(":", $._expr)), "=", $.expr_pack, ";"),
-      ),
-
     import: ($) =>
       seq("import", $.string, optional(seq("as", field("alias", $.id))), ";"),
     part: ($) => seq("part", $.string, ";"),
+
+    _top_var_decl: ($) => seq(optional($.top_decl_attr), $.var_decl),
+    _top_def_decl: ($) => seq(optional($.top_decl_attr), $.def_decl),
 
     id_pack: ($) => sepBy1(",", $.id),
     expr_pack: ($) => sepBy1(",", $._expr),
@@ -141,6 +127,23 @@ module.exports = grammar({
           $._expr,
           ";",
         ),
+      ),
+
+    var_decl: ($) =>
+      seq(
+        "var",
+        field("name", $.id_pack),
+        choice(
+          seq(":", $.expr_pack, optional(seq("=", $.expr_pack)), ";"),
+          seq("=", $.expr_pack, ";"),
+        ),
+      ),
+
+    def_decl: ($) =>
+      seq(
+        "def",
+        field("name", $.id_pack),
+        seq(optional(seq(":", $._expr)), "=", $.expr_pack, ";"),
       ),
 
     // type expressions

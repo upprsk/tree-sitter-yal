@@ -1543,112 +1543,6 @@
     }
   },
   {
-    "type": "func_attr",
-    "named": true,
-    "fields": {
-      "key": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "id",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "add",
-          "named": true
-        },
-        {
-          "type": "arr",
-          "named": true
-        },
-        {
-          "type": "call",
-          "named": true
-        },
-        {
-          "type": "cast",
-          "named": true
-        },
-        {
-          "type": "character",
-          "named": true
-        },
-        {
-          "type": "comp",
-          "named": true
-        },
-        {
-          "type": "decorator",
-          "named": true
-        },
-        {
-          "type": "field",
-          "named": true
-        },
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "id",
-          "named": true
-        },
-        {
-          "type": "int",
-          "named": true
-        },
-        {
-          "type": "lit",
-          "named": true
-        },
-        {
-          "type": "logic",
-          "named": true
-        },
-        {
-          "type": "mptr",
-          "named": true
-        },
-        {
-          "type": "mul",
-          "named": true
-        },
-        {
-          "type": "ptr",
-          "named": true
-        },
-        {
-          "type": "shift",
-          "named": true
-        },
-        {
-          "type": "sptr",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "struct",
-          "named": true
-        },
-        {
-          "type": "unary",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "func_decl",
     "named": true,
     "fields": {
@@ -1762,11 +1656,11 @@
           "named": true
         },
         {
-          "type": "func_attr",
+          "type": "func_gargs",
           "named": true
         },
         {
-          "type": "func_gargs",
+          "type": "top_decl_attr",
           "named": true
         }
       ]
@@ -2772,6 +2666,10 @@
           "named": true
         },
         {
+          "type": "top_decl_attr",
+          "named": true
+        },
+        {
           "type": "var_decl",
           "named": true
         }
@@ -3108,6 +3006,112 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "top_decl_attr",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "add",
+          "named": true
+        },
+        {
+          "type": "arr",
+          "named": true
+        },
+        {
+          "type": "call",
+          "named": true
+        },
+        {
+          "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "comp",
+          "named": true
+        },
+        {
+          "type": "decorator",
+          "named": true
+        },
+        {
+          "type": "field",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "id",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "lit",
+          "named": true
+        },
+        {
+          "type": "logic",
+          "named": true
+        },
+        {
+          "type": "mptr",
+          "named": true
+        },
+        {
+          "type": "mul",
+          "named": true
+        },
+        {
+          "type": "ptr",
+          "named": true
+        },
+        {
+          "type": "shift",
+          "named": true
+        },
+        {
+          "type": "sptr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "unary",
+          "named": true
+        }
+      ]
     }
   },
   {
