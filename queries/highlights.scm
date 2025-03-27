@@ -48,7 +48,14 @@
   name: (id) @type.definition)
 
 ((id) @type.builtin
-  (#any-of? @type.builtin "i32"))
+  (#any-of? @type.builtin
+    "bool"
+    "f32" "f64"
+    "usize" "isize"
+    "i64" "u64"
+    "i32" "u32"
+    "i16" "u16"
+    "i8" "u8"))
 
 [
   "..."
