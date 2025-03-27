@@ -25,8 +25,8 @@
 ((id) @constant.builtin
   (#any-of? @constant.builtin "nil"))
 
-(func_attr (decorator) @attribute.builtin)
-(func_attr key: (id) @property)
+(top_decl_attr (decorator) @attribute.builtin)
+(top_decl_attr key: (id) @property)
 
 ; ---------------------------------------------------------
 ; Literals
