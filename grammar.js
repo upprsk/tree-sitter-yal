@@ -70,8 +70,8 @@ module.exports = grammar({
       seq("import", $.string, optional(seq("as", field("alias", $.id))), ";"),
     part: ($) => seq("part", $.string, ";"),
 
-    _top_var_decl: ($) => seq(optional($.top_decl_attr), $.var_decl),
-    _top_def_decl: ($) => seq(optional($.top_decl_attr), $.def_decl),
+    _top_var_decl: ($) => seq(repeat($.top_decl_attr), $.var_decl),
+    _top_def_decl: ($) => seq(repeat($.top_decl_attr), $.def_decl),
 
     id_pack: ($) => sepBy1(",", $.id),
     expr_pack: ($) => sepBy1(",", $._expr),
