@@ -41,7 +41,7 @@ module.exports = grammar({
       seq(
         repeat($.top_decl_attr),
         "func",
-        field("name", $.id_pack),
+        field("name", $.func_id_pack),
         optional($.func_gargs),
         $.func_args,
         field("ret", optional($.func_ret)),
@@ -80,6 +80,7 @@ module.exports = grammar({
     _top_var_decl: ($) => seq(repeat($.top_decl_attr), $.var_decl),
     _top_def_decl: ($) => seq(repeat($.top_decl_attr), $.def_decl),
 
+    func_id_pack: ($) => sepBy1(".", $.id),
     id_pack: ($) => sepBy1(",", $.id),
     expr_pack: ($) => sepBy1(",", $._expr),
 

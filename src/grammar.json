@@ -83,7 +83,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "id_pack"
+            "name": "func_id_pack"
           }
         },
         {
@@ -642,6 +642,43 @@
         {
           "type": "SYMBOL",
           "name": "def_decl"
+        }
+      ]
+    },
+    "func_id_pack": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "id"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "."
+              },
+              {
+                "type": "SYMBOL",
+                "name": "id"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "."
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
