@@ -96,7 +96,12 @@ module.exports = grammar({
 
     block: ($) => seq("{", repeat($._stmt), "}"),
     expr_stmt: ($) => seq($._expr, ";"),
-    return_stmt: ($) => seq("return", optional($._expr), ";"),
+    return_stmt: ($) =>
+      seq(
+        "return",
+        optional(choice($._expr, $.open_expr_pack, $.closed_expr_pack)),
+        ";",
+      ),
     if_stmt: ($) =>
       seq(
         "if",
@@ -222,6 +227,9 @@ module.exports = grammar({
     logic: ($) =>
       prec.left(PREC_LOGIC, seq($._expr, choice("or", "and"), $._expr)),
 
+    open_expr_pack: ($) => sepBy1NoTrailing(",", $._expr),
+    closed_expr_pack: ($) => seq("(", sepBy1(",", $._expr), ")"),
+
     // literals
 
     lit: ($) => seq(".{", sepBy(",", $.lit_item), "}"),
@@ -274,6 +282,19 @@ module.exports = grammar({
     comment: (_) => token(seq("//", /[^\r\n]*/)),
   },
 });
+
+/**
+ * Creates a rule to match one or more of the rules separated by the separator,
+ * but does not allow a trailing separator.
+ *
+ * @param {RuleOrLiteral} sep - The separator to use.
+ * @param {RuleOrLiteral} rule
+ *
+ * @returns {SeqRule}
+ */
+function sepBy1NoTrailing(sep, rule) {
+  return seq(rule, repeat1(seq(sep, rule)));
+}
 
 /**
  * Creates a rule to match one or more of the rules separated by the separator.
