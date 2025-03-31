@@ -39,7 +39,7 @@ module.exports = grammar({
         field("name", $.func_id),
         optional($.func_gargs),
         $.func_args,
-        field("ret", optional($._expr)),
+        field("ret", optional($.func_ret)),
         choice($.block, ";"),
       ),
 
@@ -64,7 +64,10 @@ module.exports = grammar({
     func_args: ($) =>
       seq("(", sepByWithLast(",", $.func_args_item, "..."), ")"),
     func_args_item: ($) =>
-      seq(field("name", $.id), ":", field("type", $._expr)),
+      seq(field("name", $.id), optional(seq(":", field("type", $._expr)))),
+    func_ret: ($) =>
+      choice(seq("(", sepBy1(",", $.func_ret_item), ")"), $._expr),
+    func_ret_item: ($) => choice(seq($.id, ":", $._expr), $._expr),
 
     import: ($) =>
       seq("import", $.string, optional(seq("as", field("alias", $.id))), ";"),

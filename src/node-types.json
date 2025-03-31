@@ -1456,7 +1456,7 @@
       },
       "type": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "add",
@@ -1561,83 +1561,7 @@
         "required": false,
         "types": [
           {
-            "type": "add",
-            "named": true
-          },
-          {
-            "type": "arr",
-            "named": true
-          },
-          {
-            "type": "call",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "character",
-            "named": true
-          },
-          {
-            "type": "comp",
-            "named": true
-          },
-          {
-            "type": "field",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "id",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "lit",
-            "named": true
-          },
-          {
-            "type": "logic",
-            "named": true
-          },
-          {
-            "type": "mptr",
-            "named": true
-          },
-          {
-            "type": "mul",
-            "named": true
-          },
-          {
-            "type": "ptr",
-            "named": true
-          },
-          {
-            "type": "shift",
-            "named": true
-          },
-          {
-            "type": "sptr",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "struct",
-            "named": true
-          },
-          {
-            "type": "unary",
+            "type": "func_ret",
             "named": true
           }
         ]
@@ -1797,6 +1721,192 @@
       "types": [
         {
           "type": "id",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "func_ret",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "add",
+          "named": true
+        },
+        {
+          "type": "arr",
+          "named": true
+        },
+        {
+          "type": "call",
+          "named": true
+        },
+        {
+          "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "comp",
+          "named": true
+        },
+        {
+          "type": "field",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "func_ret_item",
+          "named": true
+        },
+        {
+          "type": "id",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "lit",
+          "named": true
+        },
+        {
+          "type": "logic",
+          "named": true
+        },
+        {
+          "type": "mptr",
+          "named": true
+        },
+        {
+          "type": "mul",
+          "named": true
+        },
+        {
+          "type": "ptr",
+          "named": true
+        },
+        {
+          "type": "shift",
+          "named": true
+        },
+        {
+          "type": "sptr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "unary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "func_ret_item",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "add",
+          "named": true
+        },
+        {
+          "type": "arr",
+          "named": true
+        },
+        {
+          "type": "call",
+          "named": true
+        },
+        {
+          "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "comp",
+          "named": true
+        },
+        {
+          "type": "field",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "id",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "lit",
+          "named": true
+        },
+        {
+          "type": "logic",
+          "named": true
+        },
+        {
+          "type": "mptr",
+          "named": true
+        },
+        {
+          "type": "mul",
+          "named": true
+        },
+        {
+          "type": "ptr",
+          "named": true
+        },
+        {
+          "type": "shift",
+          "named": true
+        },
+        {
+          "type": "sptr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "unary",
           "named": true
         }
       ]
