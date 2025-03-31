@@ -83,7 +83,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "func_id"
+            "name": "id_pack"
           }
         },
         {
@@ -257,31 +257,6 @@
               "type": "BLANK"
             }
           ]
-        }
-      ]
-    },
-    "func_id": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "id"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "."
-              },
-              {
-                "type": "SYMBOL",
-                "name": "id"
-              }
-            ]
-          }
         }
       ]
     },

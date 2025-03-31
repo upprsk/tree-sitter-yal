@@ -41,7 +41,7 @@ module.exports = grammar({
       seq(
         repeat($.top_decl_attr),
         "func",
-        field("name", $.func_id),
+        field("name", $.id_pack),
         optional($.func_gargs),
         $.func_args,
         field("ret", optional($.func_ret)),
@@ -59,7 +59,6 @@ module.exports = grammar({
           ),
         ),
       ),
-    func_id: ($) => seq($.id, repeat(seq(".", $.id))),
     func_gargs: ($) => seq("[", sepBy(",", $.func_gargs_item), "]"),
     func_gargs_item: ($) =>
       seq(

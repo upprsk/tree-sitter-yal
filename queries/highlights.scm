@@ -66,7 +66,7 @@
 ; ---------------------------------------------------------
 
 (func_decl
-  name: (func_id) @function)
+  name: (id_pack) @function)
 
 (call callee: (id) @function.call)
 
