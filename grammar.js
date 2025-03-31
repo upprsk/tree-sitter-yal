@@ -23,6 +23,11 @@ module.exports = grammar({
 
   extras: ($) => [$.comment, /\s/],
 
+  conflicts: ($) => [
+    [$.func_ret_item, $._expr],
+    [$.closed_expr_pack, $._expr],
+  ],
+
   rules: {
     source_file: ($) => seq($.module_decl, repeat($._top_level_decl)),
 
@@ -176,6 +181,7 @@ module.exports = grammar({
 
     _expr: ($) =>
       choice(
+        seq("(", $._expr, ")"),
         $.call,
         $.field,
         $.unary,

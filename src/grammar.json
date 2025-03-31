@@ -1393,6 +1393,23 @@
       "type": "CHOICE",
       "members": [
         {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "("
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_expr"
+            },
+            {
+              "type": "STRING",
+              "value": ")"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
           "name": "call"
         },
@@ -2283,7 +2300,16 @@
       "value": "\\s"
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    [
+      "func_ret_item",
+      "_expr"
+    ],
+    [
+      "closed_expr_pack",
+      "_expr"
+    ]
+  ],
   "precedences": [],
   "externals": [],
   "inline": [],
