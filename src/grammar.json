@@ -1483,6 +1483,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "hex"
+        },
+        {
+          "type": "SYMBOL",
           "name": "float"
         },
         {
@@ -2304,7 +2308,11 @@
     },
     "int": {
       "type": "PATTERN",
-      "value": "[0-9][xob]?[0-9_]*"
+      "value": "[0-9][0-9_]*"
+    },
+    "hex": {
+      "type": "PATTERN",
+      "value": "[0-9]x[0-9a-fA-F_]*"
     },
     "float": {
       "type": "PATTERN",

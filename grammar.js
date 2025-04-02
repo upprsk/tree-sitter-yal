@@ -197,6 +197,7 @@ module.exports = grammar({
         $.struct,
         $.id,
         $.int,
+        $.hex,
         $.float,
         $.lit,
         $.lit_kw,
@@ -288,7 +289,8 @@ module.exports = grammar({
 
     id: (_) => /[a-zA-Z_][a-zA-Z_0-9]*/,
     decorator: (_) => /@[a-zA-Z_][a-zA-Z_0-9]*/,
-    int: (_) => /[0-9][xob]?[0-9_]*/,
+    int: (_) => /[0-9][0-9_]*/,
+    hex: (_) => /[0-9]x[0-9a-fA-F_]*/,
     float: (_) => /[0-9][0-9_]*\.[0-9]+/,
 
     comment: (_) => token(seq("//", /[^\r\n]*/)),

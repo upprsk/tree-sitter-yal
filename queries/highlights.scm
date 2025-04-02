@@ -39,6 +39,7 @@
 ((id) @boolean
   (#any-of? @boolean "true" "false"))
 (int) @number
+(hex) @number
 (float) @number.float
 
 ; ---------------------------------------------------------
