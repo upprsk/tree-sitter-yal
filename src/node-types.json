@@ -52,6 +52,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -155,6 +159,10 @@
             "named": true
           },
           {
+            "type": "lit_kw",
+            "named": true
+          },
+          {
             "type": "logic",
             "named": true
           },
@@ -246,6 +254,10 @@
           },
           {
             "type": "lit",
+            "named": true
+          },
+          {
+            "type": "lit_kw",
             "named": true
           },
           {
@@ -351,6 +363,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -439,6 +455,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -588,6 +608,10 @@
             "named": true
           },
           {
+            "type": "lit_kw",
+            "named": true
+          },
+          {
             "type": "logic",
             "named": true
           },
@@ -690,6 +714,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -789,6 +817,10 @@
             "named": true
           },
           {
+            "type": "lit_kw",
+            "named": true
+          },
+          {
             "type": "logic",
             "named": true
           },
@@ -873,6 +905,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -982,6 +1018,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -1070,6 +1110,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -1176,6 +1220,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -1317,6 +1365,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -1405,6 +1457,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -1507,6 +1563,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -1631,6 +1691,10 @@
           },
           {
             "type": "lit",
+            "named": true
+          },
+          {
+            "type": "lit_kw",
             "named": true
           },
           {
@@ -1801,6 +1865,10 @@
             "named": true
           },
           {
+            "type": "lit_kw",
+            "named": true
+          },
+          {
             "type": "logic",
             "named": true
           },
@@ -1922,6 +1990,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -2010,6 +2082,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -2127,6 +2203,10 @@
             "named": true
           },
           {
+            "type": "lit_kw",
+            "named": true
+          },
+          {
             "type": "logic",
             "named": true
           },
@@ -2228,10 +2308,119 @@
   {
     "type": "lit_item",
     "named": true,
-    "fields": {},
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "lit_kw",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "arr",
+            "named": true
+          },
+          {
+            "type": "call",
+            "named": true
+          },
+          {
+            "type": "cast",
+            "named": true
+          },
+          {
+            "type": "character",
+            "named": true
+          },
+          {
+            "type": "comp",
+            "named": true
+          },
+          {
+            "type": "field",
+            "named": true
+          },
+          {
+            "type": "float",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "lit",
+            "named": true
+          },
+          {
+            "type": "lit_kw",
+            "named": true
+          },
+          {
+            "type": "logic",
+            "named": true
+          },
+          {
+            "type": "mptr",
+            "named": true
+          },
+          {
+            "type": "mul",
+            "named": true
+          },
+          {
+            "type": "ptr",
+            "named": true
+          },
+          {
+            "type": "shift",
+            "named": true
+          },
+          {
+            "type": "sptr",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "unary",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
-      "required": true,
+      "multiple": false,
+      "required": false,
       "types": [
         {
           "type": "add",
@@ -2278,6 +2467,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -2311,6 +2504,21 @@
         },
         {
           "type": "unary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lit_kw",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "id",
           "named": true
         }
       ]
@@ -2366,6 +2574,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -2476,6 +2688,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -2567,6 +2783,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -2655,6 +2875,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -2764,6 +2988,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -2859,6 +3087,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -2951,6 +3183,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -3082,6 +3318,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -3237,6 +3477,10 @@
             "named": true
           },
           {
+            "type": "lit_kw",
+            "named": true
+          },
+          {
             "type": "logic",
             "named": true
           },
@@ -3338,6 +3582,10 @@
           },
           {
             "type": "lit",
+            "named": true
+          },
+          {
+            "type": "lit_kw",
             "named": true
           },
           {
@@ -3448,6 +3696,10 @@
           "named": true
         },
         {
+          "type": "lit_kw",
+          "named": true
+        },
+        {
           "type": "logic",
           "named": true
         },
@@ -3536,6 +3788,10 @@
         },
         {
           "type": "lit",
+          "named": true
+        },
+        {
+          "type": "lit_kw",
           "named": true
         },
         {
@@ -3661,6 +3917,10 @@
           },
           {
             "type": "lit",
+            "named": true
+          },
+          {
+            "type": "lit_kw",
             "named": true
           },
           {

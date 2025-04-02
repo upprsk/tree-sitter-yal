@@ -12,6 +12,7 @@
 (field name: (id) @variable.member)
 
 (def_decl name: (id_pack (id) @constant))
+(lit_kw) @constant
 
 ((module_decl name: (id) @module.builtin)
   (#eq? @module.builtin "main"))

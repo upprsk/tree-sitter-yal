@@ -199,6 +199,7 @@ module.exports = grammar({
         $.int,
         $.float,
         $.lit,
+        $.lit_kw,
         $.arr,
         $.string,
         $.character,
@@ -239,7 +240,12 @@ module.exports = grammar({
     // literals
 
     lit: ($) => seq(".{", sepBy(",", $.lit_item), "}"),
-    lit_item: ($) => choice(seq(".", $.id, "=", $._expr)),
+    lit_item: ($) =>
+      choice(
+        seq(field("key", $.lit_kw), "=", field("value", $._expr)),
+        $._expr,
+      ),
+    lit_kw: ($) => seq(".", $.id),
 
     arr: ($) =>
       prec.left(
